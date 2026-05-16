@@ -1,0 +1,142 @@
+::ffff:127.0.0.1 - - [15/May/2026 20:08:08] "HEAD / HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:35:34] "HEAD / HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:36:18] "HEAD / HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:36:47] "GET / HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:36:50] "GET /WhatsApp%20Image%202026-05-15%20at%2019.23.06%20(1).jpeg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:36:51] code 404, message File not found
+::ffff:127.0.0.1 - - [15/May/2026 21:36:51] "GET /favicon.ico HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [15/May/2026 21:36:51] "GET /WhatsApp%20Image%202026-05-15%20at%2019.23.07.jpeg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:36:51] "GET /WhatsApp%20Image%202026-05-15%20at%2019.23.06.jpeg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:36:51] "GET /WhatsApp%20Image%202026-05-15%20at%2019.23.07%20(1).jpeg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:36:51] "GET /WhatsApp%20Image%202026-05-15%20at%2019.23.08.jpeg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:36:52] "GET /WhatsApp%20Image%202026-05-15%20at%2019.23.09%20(1).jpeg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:36:53] "GET /WhatsApp%20Image%202026-05-15%20at%2019.23.09%20(2).jpeg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:36:54] "GET /WhatsApp%20Image%202026-05-15%20at%2019.23.09%20(3).jpeg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:36:54] "GET /WhatsApp%20Image%202026-05-15%20at%2019.23.09%20(4).jpeg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:36:54] "GET /WhatsApp%20Image%202026-05-15%20at%2019.23.09.jpeg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:36:54] "GET /WhatsApp%20Image%202026-05-15%20at%2019.23.10.jpeg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:45:18] "HEAD / HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 21:46:19] "HEAD / HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 22:47:47] "GET / HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [15/May/2026 22:47:59] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:47:59] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:01] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:01] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:01] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:01] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:03] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:03] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:03] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:03] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:04] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:04] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:05] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:05] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:06] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:06] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:06] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:06] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:07] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:07] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:08] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:08] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:09] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:09] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:11] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:11] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:13] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:13] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:15] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:15] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:17] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:17] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:18] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:18] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:19] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:19] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:19] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:19] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:20] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:20] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:21] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:21] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:22] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:22] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:22] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:22] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:23] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:23] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:24] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:24] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:24] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:24] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:30] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:30] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:30] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:30] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:31] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:31] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:32] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:32] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:32] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:32] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:33] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:33] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:34] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:34] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:34] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:34] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:35] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:35] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:36] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:36] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:37] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:37] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:37] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:37] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:38] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:38] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:39] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:39] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:40] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:40] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:42] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:42] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:44] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:44] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:45] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:45] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:46] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:46] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:47] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:47] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:48] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:48] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:48] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:48] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:49] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:49] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:50] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:50] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:51] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:51] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:52] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:52] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:53] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:53] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:53] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:53] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:54] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:54] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:55] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:55] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:55] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:55] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:56] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:56] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:57] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:57] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:58] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:58] "POST /predict HTTP/1.1" 501 -
+::ffff:127.0.0.1 - - [15/May/2026 22:48:59] code 501, message Unsupported method ('POST')
+::ffff:127.0.0.1 - - [15/May/2026 22:48:59] "POST /predict HTTP/1.1" 501 -

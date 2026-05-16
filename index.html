@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Gallery & Order</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #152238;
+      --muted: #5d6778;
+      --primary: #2453ff;
+      --primary-strong: #1339c4;
+      --border: #dfe5f2;
+      --success-bg: #e8fff1;
+      --success-border: #8bd7aa;
+      --shadow: 0 10px 25px rgba(21, 34, 56, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .hero {
+      background: linear-gradient(130deg, #2453ff 0%, #4c7bff 60%, #77a2ff 100%);
+      color: #ffffff;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.4rem, 2.7vw, 2.2rem);
+      line-height: 1.2;
+    }
+
+    .hero p {
+      margin: 0;
+      opacity: 0.95;
+      max-width: 650px;
+    }
+
+    .no-auth-note {
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.17);
+      padding: 9px 13px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 980px) {
+      .layout {
+        grid-template-columns: minmax(0, 2.1fr) minmax(300px, 0.9fr);
+        align-items: start;
+      }
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .product-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .product-media {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #eef2fb;
+    }
+
+    .product-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .product-media img {
+      transform: scale(1.03);
+    }
+
+    .product-number {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      background: rgba(21, 34, 56, 0.84);
+      color: #fff;
+      border-radius: 999px;
+      padding: 5px 11px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+    }
+
+    .product-body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 14px;
+    }
+
+    .product-name {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .product-caption {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.35;
+    }
+
+    .qty-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .qty-row label {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .qty-input {
+      width: 72px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+
+    .add-btn {
+      border: none;
+      border-radius: 10px;
+      padding: 10px 14px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .add-btn:hover {
+      background: var(--primary-strong);
+    }
+
+    .cart {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 16px;
+      position: sticky;
+      top: 18px;
+    }
+
+    .cart h2 {
+      margin: 0 0 6px;
+      font-size: 1.2rem;
+    }
+
+    .cart-note {
+      margin: 0 0 14px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    #cartItems {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-height: 250px;
+      overflow: auto;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fbfcff;
+    }
+
+    #cartItems li {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e9eef8;
+      font-size: 0.92rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
+    #cartItems li:last-child {
+      border-bottom: none;
+    }
+
+    .empty-cart {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .summary {
+      margin: 12px 0 14px;
+      font-weight: 600;
+      font-size: 0.94rem;
+    }
+
+    .order-form {
+      display: grid;
+      gap: 10px;
+    }
+
+    .order-form input,
+    .order-form textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 0.92rem;
+      font-family: inherit;
+      resize: vertical;
+      background: #fff;
+    }
+
+    .order-btn {
+      border: none;
+      border-radius: 10px;
+      padding: 11px 14px;
+      background: #10a357;
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .order-btn:hover {
+      background: #0c8948;
+    }
+
+    .result {
+      margin-top: 12px;
+      border-radius: 10px;
+      border: 1px solid var(--success-border);
+      background: var(--success-bg);
+      color: #14532d;
+      padding: 10px 12px;
+      font-size: 0.9rem;
+      display: none;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Product Gallery</h1>
+      <p>Browse all products from this folder, use each product number for quick identification, and place your order instantly.</p>
+      <div class="no-auth-note">No credentials required to view or order products</div>
+    </section>
+
+    <section class="layout">
+      <section>
+        <div id="productGrid" class="products-grid" aria-label="Available products"></div>
+      </section>
+
+      <aside class="cart">
+        <h2>Your Order</h2>
+        <p class="cart-note">Add products by number and submit your details. Login/signup is not required.</p>
+        <ul id="cartItems">
+          <li class="empty-cart">No products added yet.</li>
+        </ul>
+        <p class="summary">Total items: <span id="totalItems">0</span></p>
+
+        <form id="orderForm" class="order-form">
+          <input type="text" id="customerName" placeholder="Your name (optional)" />
+          <input type="tel" id="customerPhone" placeholder="Phone number (optional)" />
+          <textarea id="deliveryAddress" rows="3" placeholder="Delivery address (optional)"></textarea>
+          <button type="submit" class="order-btn">Place Order</button>
+        </form>
+
+        <div id="orderResult" class="result"></div>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    const imageFiles = [
+      "WhatsApp Image 2026-05-15 at 19.23.06 (1).jpeg",
+      "WhatsApp Image 2026-05-15 at 19.23.06.jpeg",
+      "WhatsApp Image 2026-05-15 at 19.23.07 (1).jpeg",
+      "WhatsApp Image 2026-05-15 at 19.23.07.jpeg",
+      "WhatsApp Image 2026-05-15 at 19.23.08.jpeg",
+      "WhatsApp Image 2026-05-15 at 19.23.09 (1).jpeg",
+      "WhatsApp Image 2026-05-15 at 19.23.09 (2).jpeg",
+      "WhatsApp Image 2026-05-15 at 19.23.09 (3).jpeg",
+      "WhatsApp Image 2026-05-15 at 19.23.09 (4).jpeg",
+      "WhatsApp Image 2026-05-15 at 19.23.09.jpeg",
+      "WhatsApp Image 2026-05-15 at 19.23.10.jpeg"
+    ];
+
+    const products = imageFiles.map((image, idx) => ({
+      id: idx + 1,
+      name: `Product ${idx + 1}`,
+      image
+    }));
+
+    const productGrid = document.getElementById("productGrid");
+    const cartItemsEl = document.getElementById("cartItems");
+    const totalItemsEl = document.getElementById("totalItems");
+    const orderForm = document.getElementById("orderForm");
+    const orderResult = document.getElementById("orderResult");
+
+    const cart = new Map();
+
+    function renderProducts() {
+      productGrid.innerHTML = "";
+      products.forEach((product) => {
+        const card = document.createElement("article");
+        card.className = "product-card";
+
+        const imageUrl = encodeURIComponent(product.image);
+
+        card.innerHTML = `
+          <div class="product-media">
+            <span class="product-number">#${product.id}</span>
+            <img src="${imageUrl}" alt="${product.name}" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">${product.name}</h3>
+            <p class="product-caption">Use Product #${product.id} for quick order identification.</p>
+            <div class="qty-row">
+              <label for="qty-${product.id}">Qty</label>
+              <input id="qty-${product.id}" class="qty-input" type="number" min="1" value="1" />
+            </div>
+            <button class="add-btn" type="button" data-id="${product.id}">Add to Order</button>
+          </div>
+        `;
+
+        productGrid.appendChild(card);
+      });
+    }
+
+    function renderCart() {
+      cartItemsEl.innerHTML = "";
+      let total = 0;
+
+      if (!cart.size) {
+        cartItemsEl.innerHTML = `<li class="empty-cart">No products added yet.</li>`;
+      } else {
+        cart.forEach((qty, productId) => {
+          total += qty;
+          const li = document.createElement("li");
+          li.innerHTML = `<span>Product #${productId}</span><strong>x${qty}</strong>`;
+          cartItemsEl.appendChild(li);
+        });
+      }
+
+      totalItemsEl.textContent = String(total);
+    }
+
+    productGrid.addEventListener("click", (event) => {
+      const button = event.target.closest(".add-btn");
+      if (!button) {
+        return;
+      }
+
+      const productId = Number(button.dataset.id);
+      const qtyInput = document.getElementById(`qty-${productId}`);
+      const qty = Math.max(1, Number(qtyInput.value) || 1);
+
+      cart.set(productId, (cart.get(productId) || 0) + qty);
+      qtyInput.value = "1";
+      renderCart();
+    });
+
+    orderForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!cart.size) {
+        orderResult.style.display = "block";
+        orderResult.textContent = "Please add at least one product before placing an order.";
+        return;
+      }
+
+      const orderId = `ORD-${Date.now().toString().slice(-6)}`;
+      const summary = Array.from(cart.entries())
+        .map(([productId, qty]) => `#${productId} x${qty}`)
+        .join(", ");
+
+      orderResult.style.display = "block";
+      orderResult.textContent = `Order placed successfully (${orderId}). Products: ${summary}. No login was required.`;
+
+      cart.clear();
+      renderCart();
+      orderForm.reset();
+    });
+
+    renderProducts();
+    renderCart();
+  </script>
+</body>
+</html>
